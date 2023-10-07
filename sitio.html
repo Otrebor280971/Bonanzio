@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Bonanza</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+  
+<body>
+  <img src="logo bonanza.png" alt="Decoración" class="logo">
+
+
+
+  
+  <section id="Pagina principal">
+
+    <div id="conteiner">
+      <header>
+        <h1 >Bonanza</h1>
+      </header>
+      <nav>
+        <ul>
+          <li href="index.html" id="trayecto">
+            <a>
+              <button id="boton2">Trayecto</button>
+              <script src ="script.js"></script>
+            </a>
+          </li>
+          <li href="index.html" id="botonChat">
+            <a>
+        <button id="boton1">Chat IA</button>
+        <script src="script.js"></script>
+            </a>
+          </li>
+          <li href="index.html" id="contacto">
+              <button id="boton3">Contacto</button>
+              <script src ="script.js"></script>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <section id="content">
+        <article class="article" id="articulo1">
+          <div id="grafica">
+            <p class="bloqueSuperior">Tu historial crediticio:</p>
+            <canvas id="lineChart" width="400" height="200"></canvas>
+          </div>
+        </article>
+        <script>
+    var labels = ['Mes 1', 'Mes 2', 'Mes 3', 'Mes 4', 'Mes 5'];
+    var data = [600, 900, 500, 850, 900];
+
+    var ctx = document.getElementById('lineChart').getContext('2d');
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Puntuación Crediticia',
+                data: data,
+                borderColor: 'black', 
+                borderWidth: 2, 
+                fill: false 
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1000, 
+                }
+            }
+        }
+    });
+</script>        
+      </section>
+      <div class="clearfix"></div>
+      <footer>
+        <p id="pFooter">Bonanza &copy; 2023</p>
+      </footer>
+      
+  </section>
+
+</body>
+
+</html>
